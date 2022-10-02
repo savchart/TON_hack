@@ -1,0 +1,16 @@
+var A = /* name of type string here */ ;
+var B = /* description of type string here */ ;
+var C = /* address of type address here */ ;
+var mintbotcollectionContract = new web3.eth.Contract([**kwargs]);
+var mintbotcollection = mintbotcollectionContract.deploy({
+     data: '',
+     arguments: [A, B, C,]
+}).send({
+     from: web3.eth.accounts[0],
+     gas: ''
+   }, function (e, contract){
+    console.log(e, contract);
+    if (typeof contract.address !== 'undefined') {
+         console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
+    }
+ })
